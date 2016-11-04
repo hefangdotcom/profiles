@@ -1,0 +1,15 @@
+# .bashrc
+
+# User specific aliases and functions
+. ~/git-prompt.sh
+export GIT_PS1_SHOWDIRTYSTATE=1
+export PS1='\n'"\h:"'$PWD $(__git_ps1 "(%s)")\n\$ '
+# Source global definitions
+if [ -f /etc/bashrc ]; then
+	. /etc/bashrc
+fi
+set -o vi
+export CSCOPE_EDITOR=vim
+export CVSROOT=:pserver:$LOGNAME@stein:/cvs/cvsroot/Repository
+export TERM=xterm
+export PATH=:$PATH:/usr/X11R6/bin:/usr/local/bin:/usr/sbin:/opt/exp/bin:/usr/bin:/bin

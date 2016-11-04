@@ -1,0 +1,11 @@
+ln ../.vimrc vimrc
+ln ../.bashrc bashrc 
+ln ../.bash_profile bash_profile
+
+ln ../.screenrc screenrc
+
+ln ../.ssh/config ssh_config
+ln ../.ssh/authorized_keys authorized_keys
+ln ../.gitconfig gitconfig 
+ln ../.gitconfig gitconfig 
+

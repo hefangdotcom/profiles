@@ -1,0 +1,5 @@
+[user]
+	name = hefangdotcom
+	email = hefangdotcom@gmail.com
+[alias]
+	logs = log --date=short --pretty=format:\"%h%x09%ad %s\"

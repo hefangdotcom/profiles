@@ -1,0 +1,30 @@
+# .bash_profile
+
+# Get the aliases and functions
+if [ -f ~/.bashrc ]; then
+	. ~/.bashrc
+fi
+
+# Set colors for bash ls
+#. /etc/profile.d/colorls.sh
+
+# User specific environment and startup programs
+
+PATH=$PATH:$HOME/bin:./:/opt/exp/bin
+
+export PATH
+#export CSCOPE_DB=~/plus/BP-8-1-0-16/TelicaRoot/components/voip_iom/common/cscope.out
+#export http_proxy='http://135.245.10.25:8000/'
+
+unset USERNAME
+alias vi='/opt/exp/bin/vim7.3'
+alias vim='/opt/exp/bin/vim7.3'
+alias screen='/opt/exp/bin/screen'
+alias wipro='cd $WORKDIR/TelicaRoot/components/lynx/sys/drivers.vs3umts/vp/centillium'
+alias wiprop='cd $WORKDIR/TelicaRoot/components/lynx/sys/drivers.vs3pg/vp/centillium'
+alias vsm='cd  $WORKDIR/TelicaRoot/components/voip_iom/common/src '
+set -o vi
+
+bind '"\e[23~":"echo $WORKDIR\r"'
+bind '"\e[24~":"export WORKDIR=$PWD\r"'
+

@@ -1,0 +1,35 @@
+au  FileType  *  set nocindent
+set shortmess=I  "Sorry, No money for Uganda children
+set go+=a 
+let MultipleSearchMaxColors=256
+set nobackup nowritebackup
+colorscheme darkblue
+
+au  FileType  *  set noautoindent
+au  FileType  *  set nosmartindent
+set et
+set t_AB=[%?%p1%{8}%<%t%p1%{40}%+%e%p1%{92}%+%;%dm
+set t_AF=[%?%p1%{8}%<%t%p1%{30}%+%e%p1%{82}%+%;%dm
+set background=dark
+set sm
+set tags=tags;\
+set incsearch
+"set ignorecase
+set title
+set nocindent
+set mouse=ic
+set tabstop=4 shiftwidth=4 noexpandtab
+set diffopt+=iwhite
+map <F1> :set tags+=$HOME/plus/$WORKDIR/TelicaRoot/components/voip_iom/common/tags<CR> 
+map <F2> :set tags+=$HOME/plus/$WORKDIR/TelicaRoot/components/lynx/sys/drivers.vs3umts/vp/tags<CR> 
+map <F3> :cs add $WORKDIR/TelicaRoot/components/lynx/sys/drivers.vs3umts/vp/cscope.out<CR> 
+map <F7> :if exists("syntax_on") <Bar> syntax off <Bar> else <Bar> syntax on <Bar> endif <CR> 
+map <F9> :set invnumber<CR> 
+map <F11> :set wrap!<CR> 
+map <F12> :set number!<CR> 
+if has('cscope')
+  set cscopetag cscopeverbose
+endif
+
+com Vimrc :e $HOME/\.vimrc
+com Bash :e $HOME/\.bash_profile
