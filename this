@@ -1,2 +1,3 @@
 git ls-tree -r master --name-only
 git reset --hard 3837454
+git config receive.denyCurrentBranch ignore
