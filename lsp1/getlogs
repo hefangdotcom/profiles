@@ -1,0 +1,64 @@
+#!/opt/exptools/bin/expect
+#  Usage:  getlogs sil6u17 iom-12
+# ssh to sil6u17, rsh to iom-12, rcp files to SP, sft to lsp1 
+source hosts.tcl
+set USER "root"
+set PASSWORD "newsys"
+
+set hname  [lindex $argv 0]
+if [string match "sil*" $hname] {
+set PASSWORD "newsys"
+} else  {
+set PASSWORD "plexus9000"
+}
+
+set iom  [lindex $argv 1]
+
+
+# login to SP;
+set seq  [lsearch $hosts $hname]
+set uip  [lindex $ips $seq]
+spawn /opt/exptools/bin/ssh $USER@$uip
+expect "assword:"
+send "$PASSWORD\r"
+expect "root"
+set dirname /home/luc
+if {![file exist $dirname]} {
+    send "mkdir /home/luc\r"
+}
+send "ifconfig sar0 |grep inet |awk '{print \$2}'|awk -F':' '{print \$2}'\r"
+expect {
+    -re "192.168.252.26|192.168.252.27" {
+    set active_sp $expect_out(0,string)
+        }
+}
+
+# login to VSM; and copy logs to SP;
+send  "rsh $iom \r"
+expect "VS3"
+send "cd application \r" 
+expect "VS3"
+send "rcp KernLog.out $active_sp:/home/luc \r"
+send "rcp cpm_log.out $active_sp:/home/luc \r"
+expect ""
+
+# exit to SP then back to LSP1 
+send "exit \r"
+expect "root"
+send "exit \r"
+
+# login to SP and copy logs
+spawn /opt/exptools/bin/sftp $USER@$uip
+expect "assword:"
+send "$PASSWORD\r"
+expect "sftp"
+send "lcd $hname/$iom \r"
+expect "sftp"
+send "cd /home/luc\r" 
+expect "sftp"
+send "get KernLog.out \r"
+expect "sftp"
+send "get cpm_log.out \r"
+expect "sftp"
+send "exit \r"
+
