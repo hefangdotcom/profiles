@@ -9,3 +9,4 @@ ln ../.ssh/authorized_keys authorized_keys
 ln ../.gitconfig gitconfig 
 ln ../.gitconfig gitconfig 
 
+github is OK from chibuild
