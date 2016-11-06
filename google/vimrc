@@ -22,7 +22,7 @@ set nocindent
 set mouse=ic
 set tabstop=4 shiftwidth=4 noexpandtab
 set diffopt+=iwhite
-map <F1> :set tags=/home2/zlpan/sandbox/BRANCH-3-14/TelicaRoot/components/tags<CR> 
+map <F1> :vsplit new<CR> 
 map <F2> :set tags=/home2/zlpan/sandbox/BRANCH-8-2-1/TelicaRoot/components/tags<CR> 
 map <F3> :set tags=/home2/zlpan/postgresql/postgresql-8.3.5/tags<CR> 
 map <F4> :set tags=/home2/zlpan/berkelydb/db-4.7.25/tags<CR> 

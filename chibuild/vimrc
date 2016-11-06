@@ -20,7 +20,7 @@ set nocindent
 set mouse=ic
 set tabstop=4 shiftwidth=4 noexpandtab
 set diffopt+=iwhite
-map <F1> :set tags+=$HOME/plus/$WORKDIR/TelicaRoot/components/voip_iom/common/tags<CR> 
+map <F1> :vsplit new<CR> 
 map <F2> :set tags+=$HOME/plus/$WORKDIR/TelicaRoot/components/lynx/sys/drivers.vs3umts/vp/tags<CR> 
 map <F3> :cs add $WORKDIR/TelicaRoot/components/lynx/sys/drivers.vs3umts/vp/cscope.out<CR> 
 map <F7> :if exists("syntax_on") <Bar> syntax off <Bar> else <Bar> syntax on <Bar> endif <CR> 

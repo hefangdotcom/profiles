@@ -81,7 +81,7 @@ fi
 alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
-alias chibuild='./chibuild.sh'
+alias chibuild='ssh -p 6124 fanghe@localhost'
 alias ihgp='ssh -p 6124 fanghe@localhost'
 # Alias definitions.
 # You may want to put all your additions into a separate file like
@@ -99,6 +99,9 @@ fi
 #    . /etc/bash_completion
 #fi
 
+. ~/git-prompt.sh
+export GIT_PS1_SHOWDIRTYSTATE=1
+export PS1='\n'"\h:"'$PWD $(__git_ps1 "(%s)")\n\$ '
 bind '"\e[11~":"./chibuild.sh\r"'
 set -o vi
 
