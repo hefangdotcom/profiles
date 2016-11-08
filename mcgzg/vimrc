@@ -1,0 +1,37 @@
+au  FileType  *  set nocindent
+com Vimrc :e ~\.vimrc
+set shortmess=I  "Sorry, No money for Uganda children
+set go+=a 
+let MultipleSearchMaxColors=256
+set nobackup nowritebackup
+colorscheme darkblue
+
+au  FileType  *  set noautoindent
+au  FileType  *  set nosmartindent
+set et
+set tags=/home2/zlpan/sandbox/BRANCH-3-10-1/TelicaRoot/components/tags
+set t_AB=[%?%p1%{8}%<%t%p1%{40}%+%e%p1%{92}%+%;%dm
+set t_AF=[%?%p1%{8}%<%t%p1%{30}%+%e%p1%{82}%+%;%dm
+set background=dark
+set sm
+set tags=tags;\
+set incsearch
+"set ignorecase
+set title
+set nocindent
+set mouse=ic
+set tabstop=4 shiftwidth=4 noexpandtab
+set diffopt+=iwhite
+map <F1> :set tags=/home2/zlpan/sandbox/BRANCH-3-14/TelicaRoot/components/tags<CR> 
+map <F2> :set tags=/home2/zlpan/sandbox/BRANCH-8-2-1/TelicaRoot/components/tags<CR> 
+map <F3> :set tags=/home2/zlpan/postgresql/postgresql-8.3.5/tags<CR> 
+map <F4> :set tags=/home2/zlpan/berkelydb/db-4.7.25/tags<CR> 
+map <F5> :set tags=/home2/zlpan/sandbox/TAG-BP70011-7-0-0-11-0-3/TelicaRoot/components/tags<CR> 
+map <F7> :if exists("syntax_on") <Bar> syntax off <Bar> else <Bar> syntax on <Bar> endif <CR> 
+map <F9> :set invnumber<CR> 
+map <F11> :set wrap!<CR> 
+map <F12> :set number!<CR> 
+if has('cscope')
+  set cscopetag cscopeverbose
+endif
+
