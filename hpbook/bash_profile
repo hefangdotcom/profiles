@@ -1,0 +1,5 @@
+if [ -f ~/.bashrc ]; then . ~/.bashrc; fi
+set -o vi
+alias samsung='cd /d/android/sdk/platform-tools'
+alias profile='cd ~/profiles'
+

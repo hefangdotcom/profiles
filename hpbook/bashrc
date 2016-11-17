@@ -1,0 +1,5 @@
+export PATH=$PATH:/d/mingw/bin
+export PATH=$PATH:/d/android/sdk/platform-tools
+alias tl='cd /d/gcc/tl'
+
+

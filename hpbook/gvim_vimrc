@@ -30,6 +30,7 @@ set diffopt+=iwhite
 nnoremap \tl :set invlist list?<CR>
 nmap <F2> \tl<cr>
 map <f3> :WMToggle<cr>
+map <F1> :vsplit new<CR> 
 map <f4> :set spell!<cr>
 map <f5> :mks! D:\Luc\vim.sess<cr>
 map <f6> :source D:\Luc\vim.sess<cr>
