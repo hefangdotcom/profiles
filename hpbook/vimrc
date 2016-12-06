@@ -1,11 +1,30 @@
 
-set shortmess=I
-set runtimepath
-colorschem  darkblue
-set go+=a
-set mouse=ic
-set sm
-set et
+
+set nocompatible
+source $VIMRUNTIME/vimrc_example.vim
+source $VIMRUNTIME/mswin.vim
+behave mswin
+
+"set fencs=utf-8,gbk
+"set fileencoding=gbk, utf-8, utf-16, big5
+let MultipleSearchMaxColors=256
+set go+=a 
+"autocmd BufEnter * :cd %:p:h
+set shortmess=I  "Sorry, No money for Uganda children
+colorscheme darkblue
+set encoding=utf-8
+set langmenu=en_US.UTF-8
+set fileencoding=utf-8
+set fileencodings=ucs-bom,utf9,prc
+set guifontwide=NSimsun:h9
+set formatoptions=1
+set lbr
+set nobackup nowritebackup
+set backupdir=.\\_backup,.,\\tmp 
+set directory=.,.\\_backup,\\tmp
+set autochdir
+"ignore whitespace etc 
+set diffopt+=iwhite
 
 "invisible characters
 nnoremap \tl :set invlist list?<CR>
@@ -32,7 +51,17 @@ map <C-t> :tabnew<cr>
 
 set tabstop=4
 
-com Vimrc :e $HOME/\.vimrc
+unmap <c-a>
+com Vimrc :e $VIMRUNTIME\..\.vimrc
+com AHK :e D:\cloud\AutoHotKey.ahk
+com Rome :e D:\Luc\months\201003\rome
+com Athens :e D:\Luc\months\201003\athens
+com Zergling :e D:\Luc\months\201205\zergling
+com Utopia :e D:\Luc\months\201003\utopia
+com Smile :e D:\Luc\months\201406\Smile.txt
+com Dow :e D:\Luc\months\201406\Dow.txt
+com Sil :e D:\Luc\months\201510\sil9 
 
+com Homepage :e D:\luc\myweb\index.html
+com WAG :e ftp://fanghe@135.252.152.115/telica/toaster/home/tester/WAG/SystemTest/SCRIPTS/WAG.tcl
 
-set nobackup		" do not keep a backup file, use versions instead
