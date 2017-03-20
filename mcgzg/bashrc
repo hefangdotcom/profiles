@@ -101,5 +101,5 @@ fi
 export GIT_PS1_SHOWDIRTYSTATE=1
 export PS1='\n'"\h:"'$PWD $(__git_ps1 "(%s)")\n\$ '
 
-
+set -o vi
 

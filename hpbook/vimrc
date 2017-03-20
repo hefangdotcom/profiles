@@ -1,117 +1,36 @@
-" An example for a vimrc file.
-"
-" Maintainer:	Bram Moolenaar <Bram@vim.org>
-" Last change:	2015 Mar 24
-"
-" To use it, copy it to
-"     for Unix and OS/2:  ~/.vimrc
-"	      for Amiga:  s:.vimrc
-"  for MS-DOS and Win32:  $VIM\_vimrc
-"	    for OpenVMS:  sys$login:.vimrc
 
-" When started as "evim", evim.vim will already have done these settings.
-if v:progname =~? "evim"
-  finish
-endif
 
-" Use Vim settings, rather than Vi settings (much better!).
-" This must be first, because it changes other options as a side effect.
 set nocompatible
+source $VIMRUNTIME/vimrc_example.vim
+source $VIMRUNTIME/mswin.vim
+behave mswin
 
-" allow backspacing over everything in insert mode
-set backspace=indent,eol,start
-
-if has("vms")
-  set nobackup		" do not keep a backup file, use versions instead
-else
-  set backup		" keep a backup file (restore to previous version)
-  set undofile		" keep an undo file (undo changes after closing)
-endif
-set history=50		" keep 50 lines of command line history
-set ruler		" show the cursor position all the time
-set showcmd		" display incomplete commands
-set incsearch		" do incremental searching
-
-" For Win32 GUI: remove 't' flag from 'guioptions': no tearoff menu entries
-" let &guioptions = substitute(&guioptions, "t", "", "g")
-
-" Don't use Ex mode, use Q for formatting
-map Q gq
-
-" CTRL-U in insert mode deletes a lot.  Use CTRL-G u to first break undo,
-" so that you can undo CTRL-U after inserting a line break.
-inoremap <C-U> <C-G>u<C-U>
-
-" In many terminal emulators the mouse works just fine, thus enable it.
-if has('mouse')
-  set mouse=a
-endif
-
-" Switch syntax highlighting on, when the terminal has colors
-" Also switch on highlighting the last used search pattern.
-if &t_Co > 2 || has("gui_running")
-  syntax on
-  set hlsearch
-endif
-
-" Only do this part when compiled with support for autocommands.
-if has("autocmd")
-
-  " Enable file type detection.
-  " Use the default filetype settings, so that mail gets 'tw' set to 72,
-  " 'cindent' is on in C files, etc.
-  " Also load indent files, to automatically do language-dependent indenting.
-  filetype plugin indent on
-
-  " Put these in an autocmd group, so that we can delete them easily.
-  augroup vimrcEx
-  au!
-
-  " For all text files set 'textwidth' to 78 characters.
-  autocmd FileType text setlocal textwidth=78
-
-  " When editing a file, always jump to the last known cursor position.
-  " Don't do it when the position is invalid or when inside an event handler
-  " (happens when dropping a file on gvim).
-  autocmd BufReadPost *
-    \ if line("'\"") >= 1 && line("'\"") <= line("$") |
-    \   exe "normal! g`\"" |
-    \ endif
-
-  augroup END
-
-else
-
-  set autoindent		" always set autoindenting on
-
-endif " has("autocmd")
-
-" Convenient command to see the difference between the current buffer and the
-" file it was loaded from, thus the changes you made.
-" Only define it when not defined already.
-if !exists(":DiffOrig")
-  command DiffOrig vert new | set bt=nofile | r ++edit # | 0d_ | diffthis
-		  \ | wincmd p | diffthis
-endif
-
-if has('langmap') && exists('+langnoremap')
-  " Prevent that the langmap option applies to characters that result from a
-  " mapping.  If unset (default), this may break plugins (but it's backward
-  " compatible).
-  set langnoremap
-endif
-set shortmess=I
-set runtimepath
-colorschem  darkblue
-set go+=a
-set mouse=ic
-set sm
-set et
+"set fencs=utf-8,gbk
+"set fileencoding=gbk, utf-8, utf-16, big5
+let MultipleSearchMaxColors=256
+set go+=a 
+"autocmd BufEnter * :cd %:p:h
+set shortmess=I  "Sorry, No money for Uganda children
+colorscheme darkblue
+set encoding=utf-8
+set langmenu=en_US.UTF-8
+set fileencoding=utf-8
+set fileencodings=ucs-bom,utf9,prc
+set guifontwide=NSimsun:h9
+set formatoptions=1
+set lbr
+set nobackup nowritebackup
+set backupdir=.\\_backup,.,\\tmp 
+set directory=.,.\\_backup,\\tmp
+set autochdir
+"ignore whitespace etc 
+set diffopt+=iwhite
 
 "invisible characters
 nnoremap \tl :set invlist list?<CR>
 nmap <F2> \tl<cr>
 map <f3> :WMToggle<cr>
+map <F1> :vsplit new<CR> 
 map <f4> :set spell!<cr>
 map <f5> :mks! D:\Luc\vim.sess<cr>
 map <f6> :source D:\Luc\vim.sess<cr>
@@ -132,6 +51,17 @@ map <C-t> :tabnew<cr>
 
 set tabstop=4
 
-com Vimrc :e $HOME/\.vimrc
+unmap <c-a>
+com Vimrc :e $VIMRUNTIME\..\.vimrc
+com AHK :e D:\cloud\AutoHotKey.ahk
+com Rome :e D:\Luc\months\201003\rome
+com Athens :e D:\Luc\months\201003\athens
+com Zergling :e D:\Luc\months\201205\zergling
+com Utopia :e D:\Luc\months\201003\utopia
+com Smile :e D:\Luc\months\201406\Smile.txt
+com Dow :e D:\Luc\months\201406\Dow.txt
+com Sil :e D:\Luc\months\201510\sil9 
 
+com Homepage :e D:\luc\myweb\index.html
+com WAG :e ftp://fanghe@135.252.152.115/telica/toaster/home/tester/WAG/SystemTest/SCRIPTS/WAG.tcl
 
