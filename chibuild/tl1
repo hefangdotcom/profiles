@@ -1,0 +1,15 @@
+#!/usr/bin/expect
+source [file dirname [info script]]/hosts.tcl
+set USER "root"
+set PASSWORD "newsys"
+
+set hname  [lindex $argv 0]
+set seq  [lsearch $hosts $hname]
+set SYSTEM  [lindex $ips $seq]
+
+send "$SYSTEM \r\n"
+spawn telnet $SYSTEM 2361
+expect "character"
+send "act-user::plexview:::plexview; \r" 
+interact
+

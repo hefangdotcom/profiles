@@ -1,0 +1,27 @@
+#!/usr/bin/expect
+source [file dirname [info script]]/hosts.tcl
+set USER "root"
+set PASSWORD "plexus9000"
+
+#set KDI "vsmumts.kdi" 
+
+set KDI  [lindex $argv 1]
+
+set hname  [lindex $argv 0]
+set seq  [lsearch $hosts $hname]
+set SYSTEM  [lindex $ips $seq]
+
+if [string match "sil*" $hname] {
+set PASSWORD "newsys"
+} else  {
+set PASSWORD "plexus9000"
+}
+
+spawn /opt/exp/bin/sftp $USER@$SYSTEM
+expect "sftp> "
+send "put $KDI \r"
+set timeout 300 
+expect "sftp> "
+send "bye \r"
+exit 0
+

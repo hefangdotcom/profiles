@@ -1,0 +1,23 @@
+#!/usr/bin/expect
+source [file dirname [info script]]/hosts.tcl
+set USER "root"
+set PASSWORD "newsys"
+
+
+
+set hname  [lindex $argv 0]
+set seq  [lsearch $hosts $hname]
+set SYSTEM  [lindex $ips $seq]
+
+if [string match "sil*" $hname] {
+set PASSWORD "newsys"
+} else  {
+set PASSWORD "plexus9000"
+}
+
+send "$SYSTEM \r\n"
+spawn /opt/exp/bin/ssh $USER@$SYSTEM
+expect "assword:"
+send "$PASSWORD\r"
+interact
+
