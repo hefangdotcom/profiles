@@ -1,3 +1,25 @@
+Host *
+#    KexAlgorithms =+diffie-hellman-group1-sha1
+host qdbuild
+        HostName 135.252.41.248
+        IdentityFile ~/.ssh/luche.pem
+        User fanghe
+host 135.251.158.86 
+        HostName 135.251.158.86 
+        IdentityFile ~/.ssh/luche.pem
+        User root
+host 135.251.158.89 
+        HostName 135.251.158.89 
+        IdentityFile ~/.ssh/luche.pem
+        User root
+host 135.251.158.83 
+        HostName 135.251.158.83 
+        IdentityFile ~/.ssh/luche.pem
+        User root
+host darklord 
+        HostName darklord
+        IdentityFile ~/.ssh/luche.pem
+        User fanghe
 host ort4b 
         HostName ort4b
         IdentityFile ~/.ssh/luche.pem
@@ -26,12 +48,16 @@ host parkson
         HostName 135.252.152.48
         IdentityFile ~/.ssh/luche.pem
         User root
-host google 
+host lsp2 
         HostName 104.196.21.32
         IdentityFile ~/.ssh/luche.pem
         User root
 host alusftp
         HostName sftp.alcatel-lucent.com
+        IdentityFile ~/.ssh/luche.pem
+        User fanghe
+host qdbuild2
+        HostName 135.252.41.248
         IdentityFile ~/.ssh/luche.pem
         User fanghe
 host qdlcs
@@ -50,23 +76,11 @@ host lsp1
         HostName 135.2.51.5
         IdentityFile ~/.ssh/luche.pem
         User plexus
-host amazon
-        HostName ec2-54-68-2-180.us-west-2.compute.amazonaws.com
+host ihgp
+        HostName ihgpweb.ih.lucent.com
         IdentityFile ~/.ssh/luche.pem
-        User  ec2-user
+        User  fanghe
 host ihgpweb
         HostName ihgpweb.ih.lucent.com
         IdentityFile ~/.ssh/luche.pem
         User  fanghe
-host pa0021913
-        HostName pa0021913n9.cn.alcatel-lucent.com
-        IdentityFile ~/.ssh/luche.pem
-        User AP01+fanghe
-host amazon.cn
-        HostName 54.223.178.129
-        IdentityFile ~/.ssh/luche.pem
-        User ec2-user
-host aliyun 
-        HostName 121.42.165.241
-        IdentityFile ~/.ssh/luche.pem
-        User root
