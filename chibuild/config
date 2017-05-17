@@ -52,6 +52,10 @@ host lsp2
         HostName 104.196.21.32
         IdentityFile ~/.ssh/luche.pem
         User root
+host lsp3 
+        HostName 35.189.133.234
+        IdentityFile ~/.ssh/luche.pem
+        User hetianle2005
 host alusftp
         HostName sftp.alcatel-lucent.com
         IdentityFile ~/.ssh/luche.pem
