@@ -53,7 +53,7 @@ host lsp2
         IdentityFile ~/.ssh/luche.pem
         User root
 host lsp3 
-        HostName 35.189.133.234
+        HostName 35.187.213.156 
         IdentityFile ~/.ssh/luche.pem
         User hetianle2005
 host alusftp
