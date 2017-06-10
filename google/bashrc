@@ -108,3 +108,5 @@ set -o vi
 export ANDROID_HOME=/root/android/android-sdk-linux
 export PATH=$PATH:$ANDROID_HOME/tools
 export PATH=$PATH:$ANDROID_HOME/platform-tools
+
+[[ -s "/root/.gvm/scripts/gvm" ]] && source "/root/.gvm/scripts/gvm"
