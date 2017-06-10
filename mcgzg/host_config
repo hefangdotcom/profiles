@@ -1,0 +1,51 @@
+
+host aliyun 
+        HostName 121.42.165.241
+        IdentityFile ~/.ssh/luche.pem
+        User root
+host gce2 
+        HostName 35.187.213.156 
+        IdentityFile ~/.ssh/luche.pem
+        User hetianle2005
+host google 
+        HostName 104.196.21.32
+        IdentityFile ~/.ssh/luche.pem
+        User root
+host alusftp
+        HostName sftp.alcatel-lucent.com
+        IdentityFile ~/.ssh/luche.pem
+        User fanghe
+host qdlcs
+        HostName 135.252.142.134
+        IdentityFile ~/.ssh/luche.pem
+        User fanghe
+host darklord
+        HostName darklord.inse.lucent.com
+        IdentityFile ~/.ssh/luche.pem
+        User fanghe
+host chibuild
+        HostName chibuild.inse.lucent.com
+        IdentityFile ~/.ssh/luche.pem
+        User fanghe
+host lsp1
+        HostName 135.2.51.5
+        IdentityFile ~/.ssh/luche.pem
+        User plexus
+host amazon
+        HostName ec2-54-68-2-180.us-west-2.compute.amazonaws.com
+        IdentityFile ~/.ssh/luche.pem
+        User  ec2-user
+host ihgpweb
+        HostName ihgpweb.ih.lucent.com
+        IdentityFile ~/.ssh/luche.pem
+        User  fanghe
+host pa0021913
+        HostName pa0021913n9.ad4.ad.alcatel.com
+        IdentityFile ~/.ssh/luche.pem
+        User AP01+fanghe
+host amazon.cn
+        HostName 54.223.178.129
+        IdentityFile ~/.ssh/luche.pem
+        User ec2-user
+
+
