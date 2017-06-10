@@ -24,6 +24,7 @@ alias wipro='cd $WORKDIR/TelicaRoot/components/lynx/sys/drivers.vs3umts/vp/centi
 alias wiprop='cd $WORKDIR/TelicaRoot/components/lynx/sys/drivers.vs3pg/vp/centillium'
 alias vsm='cd  $WORKDIR/TelicaRoot/components/voip_iom/common/src '
 alias mgrm='cd  $WORKDIR/TelicaRoot/components/signaling/mgrm '
+alias telica='cd  $WORKDIR/TelicaRoot/components/telica_common/inc '
 alias plus='cd ~/plus'
 alias png='cd ~/gcc_test/pngbook'
 set -o vi
