@@ -26,10 +26,6 @@ host ihgpweb
         HostName ihgpweb.ih.lucent.com
         IdentityFile ~/.ssh/luche.pem
         User  fanghe
-host pa0021913
-        HostName 192.168.0.102
-        IdentityFile ~/.ssh/luche.pem
-        User AD4+fanghe
 host amazon.cn
         HostName 54.223.178.129
         IdentityFile ~/.ssh/luche.pem
@@ -38,18 +34,10 @@ host mcgzg
         HostName 121.42.165.241
         IdentityFile ~/.ssh/luche.pem
         User root
-host imac
-        HostName  192.168.0.80
-        IdentityFile ~/.ssh/luche.pem
-        User hetianle
-host t60
-        HostName  192.168.0.60
-        IdentityFile ~/.ssh/luche.pem
-        User fanghe
 host dell
-        HostName  192.168.0.70
+        HostName  192.168.0.113
         IdentityFile ~/.ssh/luche.pem
-        User lingyi
+        User luc
 host hp
         HostName  192.168.0.123
         IdentityFile ~/.ssh/luche.pem

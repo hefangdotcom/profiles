@@ -1,0 +1,3 @@
+cd "/Users/hetianle/Library/Application Support/minecraft/screenshots/"
+ls -At *.png |head -n1 |xargs -I {} cp {} screentoday
+scp screentoday mcgzg:/var/www/html/screenshot/screentoday.png
