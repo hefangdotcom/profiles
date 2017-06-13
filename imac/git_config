@@ -1,0 +1,6 @@
+[user]
+	name = hefangdotcom
+	email = hefangdotcom@gmail.com
+[alias]
+	logs = log --date=short --pretty=format:\"%h%x09%ad %s\"
+	ls = ls-tree -r master --name-only
