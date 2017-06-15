@@ -4,3 +4,20 @@
 [alias]
 	logs = log --date=short --pretty=format:\"%h%x09%ad %s\"
 	ls = ls-tree -r master --name-only
+[color]
+	branch = auto
+	diff = auto
+	status = auto
+[color "branch"]
+	current = yellow reverse
+	local = yellow
+	remote = green
+[color "diff"]
+	meta = yellow bold
+	frag = magenta bold
+	old = red bold
+	new = green bold
+[color "status"]
+	added = yellow
+	changed = green
+	untracked = cyan

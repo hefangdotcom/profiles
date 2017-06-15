@@ -1,0 +1,25 @@
+alias chibuild='ssh -p 6123 fanghe@localhost'
+
+# .bashrc
+
+if [ -f /etc/bashrc ]; then
+	. /etc/bashrc
+fi
+
+if [ -f ~/.bashrc ]; then
+	. ~/.bashrc
+fi
+source ~/.bash_git
+export PS1='\[\033[01;32m\]os \[\033[01;34m\]\w $(__git_ps1 "[%s]")\$\[\033[00m\] '
+export GIT_PS1_SHOWDIRTYSTATE=1
+export GIT_PS1_SHOWUPSTREAM="auto"
+
+# User specific aliases and functions
+#. ~/git-prompt.sh
+#export GIT_PS1_SHOWDIRTYSTATE=1
+#export PS1='\n'"\h:"'$PWD $(__git_ps1 "(%s)")\n\$ '
+# Source global definitions
+
+set -o vi
+export TERM=xterm
+export PS1='\n'"\h:"'$PWD $(__git_ps1 "(%s)")\n\$ '
