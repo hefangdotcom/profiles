@@ -1,4 +1,4 @@
-alias chibuild='ssh -p 6123 fanghe@localhost'
+alias ls='ls -G'
 
 # .bashrc
 
