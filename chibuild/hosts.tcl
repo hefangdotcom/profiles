@@ -1,6 +1,6 @@
 
 set ips {
-dow.inse.lucent.com
+nasdaq.inse.lucent.com
 10.18.32.23
 10.18.32.6
 10.18.33.54
@@ -24,7 +24,7 @@ dow.inse.lucent.com
 }
 
 set hosts {
-dow
+nasdaq
 sil6u1
 sil6u7
 sil6u16

@@ -1,0 +1,98 @@
+Host *
+#    KexAlgorithms =+diffie-hellman-group1-sha1
+host qdbuild
+        HostName 135.252.41.248
+        IdentityFile ~/.ssh/luche.pem
+        User fanghe
+host 135.251.158.86 
+        HostName 135.251.158.86 
+        IdentityFile ~/.ssh/luche.pem
+        User root
+host 135.251.158.89 
+        HostName 135.251.158.89 
+        IdentityFile ~/.ssh/luche.pem
+        User root
+host 135.251.158.83 
+        HostName 135.251.158.83 
+        IdentityFile ~/.ssh/luche.pem
+        User root
+host darklord 
+        HostName darklord
+        IdentityFile ~/.ssh/luche.pem
+        User fanghe
+host ort4b 
+        HostName ort4b
+        IdentityFile ~/.ssh/luche.pem
+        User root
+host nasdaq
+        HostName nasdaq
+        IdentityFile ~/.ssh/luche.pem
+        User root
+host dow 
+        HostName dow
+        IdentityFile ~/.ssh/luche.pem
+        User root
+host robin 
+        HostName robin
+        IdentityFile ~/.ssh/luche.pem
+        User root
+host calzone 
+        HostName calzone
+        IdentityFile ~/.ssh/luche.pem
+        User root
+host batman 
+        HostName batman
+        IdentityFile ~/.ssh/luche.pem
+        User root
+host thunder 
+        HostName thunder
+        IdentityFile ~/.ssh/luche.pem
+        User root
+host parkson 
+        HostName 135.252.152.48
+        IdentityFile ~/.ssh/luche.pem
+        User root
+host lsp2 
+        HostName 104.196.21.32
+        IdentityFile ~/.ssh/luche.pem
+        User root
+host lsp3 
+        HostName 35.187.213.156 
+        IdentityFile ~/.ssh/luche.pem
+        User hetianle2005
+host alusftp
+        HostName sftp.alcatel-lucent.com
+        IdentityFile ~/.ssh/luche.pem
+        User fanghe
+host qdbuild2
+        HostName 135.252.41.248
+        IdentityFile ~/.ssh/luche.pem
+        User fanghe
+host qdlcs
+        HostName 135.252.142.134
+        IdentityFile ~/.ssh/luche.pem
+        User fanghe
+host darklord
+        HostName darklord.inse.lucent.com
+        IdentityFile ~/.ssh/luche.pem
+        User fanghe
+host chibuild
+        HostName chibuild.inse.lucent.com
+        IdentityFile ~/.ssh/luche.pem
+        User fanghe
+host lsp1
+        HostName 135.2.51.5
+        IdentityFile ~/.ssh/luche.pem
+        User plexus
+host ihgp
+        HostName ihgpweb.ih.lucent.com
+        IdentityFile ~/.ssh/luche.pem
+        User  fanghe
+host ihgpweb
+        HostName ihgpweb.ih.lucent.com
+        IdentityFile ~/.ssh/luche.pem
+        User  fanghe
+host pa0021913
+        HostName pa0023881n0.ad4.ad.alcatel.com
+        IdentityFile ~/.ssh/luche.pem
+        User  fanghe
