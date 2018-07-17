@@ -1,10 +1,26 @@
 
-host google 
-        HostName 104.196.21.32
+host github.com
+        HostName github.com
         IdentityFile ~/.ssh/luche.pem
-        User root
+        User git
+host gce3
+        HostName 35.194.105.71
+        IdentityFile ~/.ssh/luche.pem
+        User ly0107
+host google 
+        HostName 35.194.112.109
+        IdentityFile ~/.ssh/luche.pem
+        User ly0107
 host alusftp
         HostName sftp.alcatel-lucent.com
+        IdentityFile ~/.ssh/luche.pem
+        User fanghe
+host calzone
+        HostName 135.251.84.71
+        IdentityFile ~/.ssh/luche.pem
+        User admin
+host qdbuild2
+        HostName 135.252.41.248
         IdentityFile ~/.ssh/luche.pem
         User fanghe
 host qdlcs
@@ -15,6 +31,14 @@ host batman
         HostName batman.inse.lucent.com
         IdentityFile ~/.ssh/luche.pem
         User root
+host stein
+        HostName stein.inse.lucent.com
+        IdentityFile ~/.ssh/luche.pem
+        User fanghe
+host build4
+        HostName build4.inse.lucent.com
+        IdentityFile ~/.ssh/luche.pem
+        User fanghe
 host chibuild
         HostName chibuild.inse.lucent.com
         IdentityFile ~/.ssh/luche.pem
@@ -48,16 +72,16 @@ host mcgzg
         HostName 121.42.165.241
         IdentityFile ~/.ssh/luche.pem
         User root
-host imac
-        HostName  192.168.0.80
-        IdentityFile ~/.ssh/luche.pem
-        User hetianle
-host t60
-        HostName  192.168.0.60
+host hp
+        HostName  192.168.0.123
         IdentityFile ~/.ssh/luche.pem
         User fanghe
+host imac
+        HostName  192.168.0.127
+        IdentityFile ~/.ssh/luche.pem
+        User hetianle
 host dell
-        HostName  192.168.0.70
+        HostName  192.168.0.113
         IdentityFile ~/.ssh/luche.pem
         User lingyi
 host hppro
